@@ -1,0 +1,11 @@
+
+import requests
+
+def download_img(img_url,file_name):
+
+    # img_url = 'https://www.baidu.com/img/bd_logo1.png'
+    response = requests.get(img_url)
+    img_date = response.content
+    with open('file_name','wb') as f:
+        f.write(img_date)
+download_img('https://www.baidu.com/img/bd_logo1.png','baidu.png')
